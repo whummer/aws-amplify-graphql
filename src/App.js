@@ -1,3 +1,6 @@
+/* eslint-disable import/first */
+
+
 import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
@@ -17,6 +20,10 @@ import AllPhotos from "./Components/AllPhotos";
 import AddPhoto from "./Components/AddPhoto";
 
 import awsconfig from './aws-exports';
+
+// apply patches
+import applyPatches from 'amplify-js-local/lib/es6';
+applyPatches();
 
 // Amplify init
 Amplify.configure(awsconfig);
